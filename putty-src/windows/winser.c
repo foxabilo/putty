@@ -137,7 +137,7 @@ static const char *serial_configure(Serial serial, HANDLE serport, Conf *conf)
 	  case 4: dcb.StopBits = TWOSTOPBITS; str = "2"; break;
 	  default: return "Invalid number of stop bits (need 1, 1.5 or 2)";
 	}
-	msg = dupprintf("Configuring %s data bits", str);
+	msg = dupprintf("Configuring %s stop bits", str);
 	logevent(serial->frontend, msg);
 	sfree(msg);
 
